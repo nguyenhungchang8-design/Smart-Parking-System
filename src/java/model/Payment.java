@@ -3,8 +3,8 @@ package model;
 import java.math.BigDecimal;
 import java.util.Date;
 
-public class Transaction {
-    private int transactionId;
+public class Payment {
+    private int paymentId;
     private int ticketId;
     private BigDecimal amount;
     private String paymentMethod;
@@ -12,11 +12,11 @@ public class Transaction {
     private Date paidAt; // Nullable
     private Date createdAt;
 
-    public Transaction() {
+    public Payment() {
     }
 
-    public Transaction(int transactionId, int ticketId, BigDecimal amount, String paymentMethod, String status, Date paidAt, Date createdAt) {
-        this.transactionId = transactionId;
+    public Payment(int paymentId, int ticketId, BigDecimal amount, String paymentMethod, String status, Date paidAt, Date createdAt) {
+        this.paymentId = paymentId;
         this.ticketId = ticketId;
         this.amount = amount;
         this.paymentMethod = paymentMethod;
@@ -25,12 +25,12 @@ public class Transaction {
         this.createdAt = createdAt;
     }
 
-    public int getTransactionId() {
-        return transactionId;
+    public int getPaymentId() {
+        return paymentId;
     }
 
-    public void setTransactionId(int transactionId) {
-        this.transactionId = transactionId;
+    public void setPaymentId(int paymentId) {
+        this.paymentId = paymentId;
     }
 
     public int getTicketId() {
@@ -83,8 +83,8 @@ public class Transaction {
 
     @Override
     public String toString() {
-        return "Transaction{" +
-                "transactionId=" + transactionId +
+        return "Payment{" +
+                "paymentId=" + paymentId +
                 ", ticketId=" + ticketId +
                 ", amount=" + amount +
                 ", paymentMethod='" + paymentMethod + '\'' +

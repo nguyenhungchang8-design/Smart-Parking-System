@@ -6,7 +6,7 @@ public class Ticket {
     private int ticketId;
     private int lotId;
     private int slotId;
-    private Integer userId; // Nullable
+    private Integer accountId; // Nullable
     private String licensePlate;
     private String vehicleType;
     private Date checkInTime;
@@ -17,11 +17,11 @@ public class Ticket {
     public Ticket() {
     }
 
-    public Ticket(int ticketId, int lotId, int slotId, Integer userId, String licensePlate, String vehicleType, Date checkInTime, Date checkOutTime, String status, int createdBy) {
+    public Ticket(int ticketId, int lotId, int slotId, Integer accountId, String licensePlate, String vehicleType, Date checkInTime, Date checkOutTime, String status, int createdBy) {
         this.ticketId = ticketId;
         this.lotId = lotId;
         this.slotId = slotId;
-        this.userId = userId;
+        this.accountId = accountId;
         this.licensePlate = licensePlate;
         this.vehicleType = vehicleType;
         this.checkInTime = checkInTime;
@@ -54,12 +54,12 @@ public class Ticket {
         this.slotId = slotId;
     }
 
-    public Integer getUserId() {
-        return userId;
+    public Integer getAccountId() {
+        return accountId;
     }
 
-    public void setUserId(Integer userId) {
-        this.userId = userId;
+    public void setAccountId(Integer accountId) {
+        this.accountId = accountId;
     }
 
     public String getLicensePlate() {
@@ -116,7 +116,7 @@ public class Ticket {
                 "ticketId=" + ticketId +
                 ", lotId=" + lotId +
                 ", slotId=" + slotId +
-                ", userId=" + userId +
+                ", accountId=" + accountId +
                 ", licensePlate='" + licensePlate + '\'' +
                 ", vehicleType='" + vehicleType + '\'' +
                 ", checkInTime=" + checkInTime +

@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class Reservation {
     private int reservationId;
-    private int userId;
+    private int accountId;
     private int slotId;
     private Date reservedFrom;
     private Date reservedTo;
@@ -14,9 +14,9 @@ public class Reservation {
     public Reservation() {
     }
 
-    public Reservation(int reservationId, int userId, int slotId, Date reservedFrom, Date reservedTo, String status, Date createdAt) {
+    public Reservation(int reservationId, int accountId, int slotId, Date reservedFrom, Date reservedTo, String status, Date createdAt) {
         this.reservationId = reservationId;
-        this.userId = userId;
+        this.accountId = accountId;
         this.slotId = slotId;
         this.reservedFrom = reservedFrom;
         this.reservedTo = reservedTo;
@@ -32,12 +32,12 @@ public class Reservation {
         this.reservationId = reservationId;
     }
 
-    public int getUserId() {
-        return userId;
+    public int getAccountId() {
+        return accountId;
     }
 
-    public void setUserId(int userId) {
-        this.userId = userId;
+    public void setAccountId(int accountId) {
+        this.accountId = accountId;
     }
 
     public int getSlotId() {
@@ -84,7 +84,7 @@ public class Reservation {
     public String toString() {
         return "Reservation{" +
                 "reservationId=" + reservationId +
-                ", userId=" + userId +
+                ", accountId=" + accountId +
                 ", slotId=" + slotId +
                 ", reservedFrom=" + reservedFrom +
                 ", reservedTo=" + reservedTo +

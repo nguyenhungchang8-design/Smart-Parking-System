@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class Notification {
     private int notificationId;
-    private int userId;
+    private int accountId;
     private Integer lotId; // Nullable
     private String type;
     private String title;
@@ -15,9 +15,9 @@ public class Notification {
     public Notification() {
     }
 
-    public Notification(int notificationId, int userId, Integer lotId, String type, String title, String message, boolean isRead, Date createdAt) {
+    public Notification(int notificationId, int accountId, Integer lotId, String type, String title, String message, boolean isRead, Date createdAt) {
         this.notificationId = notificationId;
-        this.userId = userId;
+        this.accountId = accountId;
         this.lotId = lotId;
         this.type = type;
         this.title = title;
@@ -34,12 +34,12 @@ public class Notification {
         this.notificationId = notificationId;
     }
 
-    public int getUserId() {
-        return userId;
+    public int getAccountId() {
+        return accountId;
     }
 
-    public void setUserId(int userId) {
-        this.userId = userId;
+    public void setAccountId(int accountId) {
+        this.accountId = accountId;
     }
 
     public Integer getLotId() {
@@ -94,7 +94,7 @@ public class Notification {
     public String toString() {
         return "Notification{" +
                 "notificationId=" + notificationId +
-                ", userId=" + userId +
+                ", accountId=" + accountId +
                 ", lotId=" + lotId +
                 ", type='" + type + '\'' +
                 ", title='" + title + '\'' +

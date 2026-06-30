@@ -2,8 +2,8 @@ package model;
 
 import java.util.Date;
 
-public class User {
-    private int userId;
+public class Account {
+    private int accountId;
     private String fullName;
     private String email;
     private String phone;
@@ -12,11 +12,11 @@ public class User {
     private String status;
     private Date createdAt;
 
-    public User() {
+    public Account() {
     }
 
-    public User(int userId, String fullName, String email, String phone, String passwordHash, String role, String status, Date createdAt) {
-        this.userId = userId;
+    public Account(int accountId, String fullName, String email, String phone, String passwordHash, String role, String status, Date createdAt) {
+        this.accountId = accountId;
         this.fullName = fullName;
         this.email = email;
         this.phone = phone;
@@ -26,12 +26,12 @@ public class User {
         this.createdAt = createdAt;
     }
 
-    public int getUserId() {
-        return userId;
+    public int getAccountId() {
+        return accountId;
     }
 
-    public void setUserId(int userId) {
-        this.userId = userId;
+    public void setAccountId(int accountId) {
+        this.accountId = accountId;
     }
 
     public String getFullName() {
@@ -92,8 +92,8 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" +
-                "userId=" + userId +
+        return "Account{" +
+                "accountId=" + accountId +
                 ", fullName='" + fullName + '\'' +
                 ", email='" + email + '\'' +
                 ", phone='" + phone + '\'' +
